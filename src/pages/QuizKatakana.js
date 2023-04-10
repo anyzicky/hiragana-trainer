@@ -1,8 +1,12 @@
+import katakanaData from '../data/katakana.json'
+import QuizScreen from "../components/QuizScreen"
+
 const QuizKatakana = () => {
+ 
     return (
-        <div>
-            Quiz hiragana page
-        </div>
+        <>
+            <QuizScreen alphabet={katakanaData}/>
+        </>
     )
 }
 
