@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from './pages/Home';
+import QuizHiragana from './pages/QuizHiragana';
+import QuizKatakana from './pages/QuizKatakana';
+import Learn from './pages/Learn';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <Router>
+            <div className="App">
+                
+                <Routes>
+                    <Route path="/" element={<Home/>}></Route>
+                    <Route path="/hiragana" element={<QuizHiragana/>}></Route>
+                    <Route path="/katakana" element={<QuizKatakana/>}></Route>
+                    <Route path="/learn" element={<Learn/>}></Route>
+                </Routes>
+                
+            </div>
+        </Router>
+    );
 }
 
 export default App;
